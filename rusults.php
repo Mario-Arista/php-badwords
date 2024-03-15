@@ -4,7 +4,7 @@
 
     $censura = $_GET['parola'];
 
-    $paragarfoSeparato = explode(" ", $paragrafo);
+    $paragrafo_censurato = str_replace($censura, '***', $paragrafo)
 
 ?>
 
@@ -38,7 +38,7 @@
             <div class="pb-2">
                 <h2 class="text-white fs-4 text-center">Il paragrafo è lungo:</h2>
                 <div class="text-warning fs-5 text-center">
-                    <?php echo strlen($paragrafo); ?> Caratteri, compresi gli spazi.
+                    <?php echo strlen($paragrafo); ?> caratteri, compresi gli spazi.
                 </div>
             </div>
             <div>
@@ -54,13 +54,13 @@
             <div>
                 <h2 class="text-black fs-4 text-center">Il paragrafo censurato è:</h2>
                 <p class="text-secondary fs-5 text-center ">
-                    <?php echo var_dump( $paragarfoSeparato ); ?>
+                    <?php echo $paragrafo_censurato  ?>
                 </p>
             </div>
             <div class="pb-2">
                 <h2 class="text-black fs-4 text-center">Il paragrafo censurato è lungo:</h2>
                 <div class="text-secondary fs-5 text-center">
-                    <?php echo strlen($paragrafo); ?> Caratteri, compresi gli spazi.
+                   <?php echo strlen($paragrafo_censurato); ?> caratteri, compresi gli spazi.
                 </div>
             </div>
 
