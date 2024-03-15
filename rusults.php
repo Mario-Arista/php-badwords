@@ -22,50 +22,55 @@
 
 <body class="bg-dark">
 
-<header class="container-fluid bg-secondary">
-        <h1 class="text-warning fs-1 p-3 text-center">Risultati del gioco-aperitivo!</h1>
+    <header class="container-fluid bg-secondary">
+            <h1 class="text-warning fs-1 p-3 text-center">Risultati del gioco-aperitivo!</h1>
     </header>
+
+
     <main class="container-fluid"> 
+        
         <div class="col-4 m-auto pt-4">
 
-        <div class="bg-secondary rounded-3 p-3">
-            <div>
-                <h2 class="text-white fs-4 text-center">Il paragrafo che hai scritto è questo:</h2>
-                <p class="text-warning fs-5 text-center">
-                    <?php echo $paragrafo ?>
-                </p>
-            </div>
-            <div class="pb-2">
-                <h2 class="text-white fs-4 text-center">Il paragrafo è lungo:</h2>
-                <div class="text-warning fs-5 text-center">
-                    <?php echo strlen($paragrafo); ?> caratteri, compresi gli spazi.
+            <!-- INFO PARAGRAFO E PAROLA UTENTE -->
+            <div class="bg-secondary rounded-3 p-3">
+                <div>
+                    <h2 class="text-white fs-4 text-center">Il paragrafo che hai scritto è questo:</h2>
+                    <p class="text-warning fs-5 text-center">
+                        <?php echo $paragrafo ?>
+                    </p>
                 </div>
-            </div>
-            <div>
-                <h2 class="text-white fs-4 text-center">La parola da censurare è questa:</h2>
-                <p class="text-warning fs-5 text-center">
-                    <?php echo $censura ?>
-                </p>
-            </div>
-
-        </div>
-
-        <div class="bg-warning rounded-3 p-3 mt-4">
-            <div>
-                <h2 class="text-black fs-4 text-center">Il paragrafo censurato è:</h2>
-                <p class="text-secondary fs-5 text-center ">
-                    <?php echo $paragrafo_censurato  ?>
-                </p>
-            </div>
-            <div class="pb-2">
-                <h2 class="text-black fs-4 text-center">Il paragrafo censurato è lungo:</h2>
-                <div class="text-secondary fs-5 text-center">
-                   <?php echo strlen($paragrafo_censurato); ?> caratteri, compresi gli spazi.
+                <div class="pb-2">
+                    <h2 class="text-white fs-4 text-center">Il paragrafo è lungo:</h2>
+                    <div class="text-warning fs-5 text-center">
+                        <?php echo strlen($paragrafo); ?> caratteri, compresi gli spazi.
+                    </div>
                 </div>
+                <div>
+                    <h2 class="text-white fs-4 text-center">La parola da censurare è questa:</h2>
+                    <p class="text-warning fs-5 text-center">
+                        <?php echo $censura ?>
+                    </p>
+                </div>
+
             </div>
 
-        </div>
+             <!-- PARAGRAFO CENSURATO -->
+            <div class="bg-warning rounded-3 p-3 mt-4">
+                <div>
+                    <h2 class="text-black fs-4 text-center">Il paragrafo censurato è:</h2>
+                    <p class="text-secondary fs-5 text-center ">
+                        <?php echo $paragrafo_censurato  ?>
+                    </p>
+                </div>
+                <div class="pb-2">
+                    <h2 class="text-black fs-4 text-center">Il paragrafo censurato è lungo:</h2>
+                    <div class="text-secondary fs-5 text-center">
+                    <?php echo strlen($paragrafo_censurato); ?> caratteri, compresi gli spazi.
+                    </div>
+                </div>
 
+            </div>
+        </div>
     </main>
 
      <!-- BOOTSTRAP -->
